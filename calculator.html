@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Geo&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .formstyle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(0, 0, 0);
+            max-width: fit-content;
+            text-align: center;
+            margin: auto;
+            height: 80vh;
+            margin-top: 20px !important;
+        }
+
+        .result {
+            padding: 15px 30px !important;
+            background: rgba(63, 75, 73, 0.613);
+            color: white;
+            font-size: 30px;
+            text-align: right;
+            box-sizing: border-box;
+            border: none;
+            box-shadow: none;
+            margin: 20px 5px 0px 5px !important;
+            width: 300px;
+            /* border: 1px solid white; */
+        }
+
+        .result::placeholder {
+            font-family: 'Geo', sans-serif;
+            font-size: 60px;
+            align-items: center;
+            text-align: center;
+        }
+
+        input {
+            margin: 0px 20px;
+            padding: 5px;
+            font-size: 30px;
+            background: transparent;
+            border: none;
+            color: white;
+        }
+
+        input:hover {
+            background: rgba(238, 229, 229, 0.087);
+        }
+
+        .clear {
+            border: none;
+            width: 280px;
+            margin-bottom: 20px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="formstyle">
+        <form class="forms">
+            <input type="text" name="answer" placeholder="88888888888888888" class="result"> <br><br>
+
+            <input type="button" value=" 1 " onclick="form.answer.value += '1' ">
+            <input type="button" value=" 2 " onclick="form.answer.value += '2' ">
+            <input type="button" value=" 3 " onclick="form.answer.value += '3' ">
+            <br><br>
+
+            <input type="button" value=" 4 " onclick="form.answer.value += '4' ">
+            <input type="button" value=" 5 " onclick="form.answer.value += '5' ">
+            <input type="button" value=" 6 " onclick="form.answer.value += '6' ">
+            <br><br>
+
+            <input type="button" value=" 7 " onclick="form.answer.value += '7' ">
+            <input type="button" value=" 8 " onclick="form.answer.value += '8' ">
+            <input type="button" value=" 9 " onclick="form.answer.value += '9' ">
+            <br><br>
+
+            <input type="button" value=" + " onclick="form.answer.value += '+' ">
+            <input type="button" value=" - " onclick="form.answer.value += '-' ">
+            <input type="button" value=" * " onclick="form.answer.value += '*' ">
+            <br><br>
+
+            <input type="button" value=" / " onclick="form.answer.value += '/' ">
+            <input type="button" value=" 0 " onclick="form.answer.value += '0' ">
+            <input type="button" value=" = " onclick="form.answer.value = eval(form.answer.value)">
+            <br><br>
+
+            <input type="button" value="Clear" onclick="form.answer.value = '' " class="clear">
+        </form>
+    </div>
+</body>
+
+</html>
